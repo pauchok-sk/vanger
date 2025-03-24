@@ -1,0 +1,19 @@
+.bann-title {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -0.72px;
+  @include desktop {
+    font-size: 64px;
+  }
+  @include laptop {
+    font-size: 56px;
+  }
+  @include laptop-min {
+    font-size: 48px;
+  }
+  @include tablet {
+    font-size: 32px;
+    line-height: 130%;
+  }
+}

@@ -1,0 +1,44 @@
+.btn-reset {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.button {
+  @include flex-center;
+  padding: 15px 30px;
+  border-radius: 100px;
+  background-color: var(--yellow);
+  width: fit-content;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  text-align: center;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+  @include hover {
+    background-color: var(--black);
+    color: var(--yellow);
+  }
+  @include pressed {
+    color: var(--light);
+  }
+  &._disabled {
+    pointer-events: none;
+    background-color: var(--stroke);
+    color: var(--gray);
+  }
+  &._min {
+    padding: 10px 24px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.56px;
+  }
+}

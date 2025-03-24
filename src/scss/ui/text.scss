@@ -1,0 +1,11 @@
+.lg-text {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 38px;
+  letter-spacing: 0.48px;
+  @include tablet {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.4px;
+  }
+}
