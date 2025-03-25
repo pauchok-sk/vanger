@@ -11,10 +11,16 @@
 @import "./ui/list";
 @import "./ui/title";
 @import "./ui/text";
+@import "./ui/sect";
+@import "./ui/scrollable";
+@import "./ui/filters";
+@import "./ui/portfolio-card";
 
 // components
 @import "./components/header";
 
 @import "./components/hero";
+@import "./components/skills";
+@import "./components/portfolio";
 
 @import "./components/footer";

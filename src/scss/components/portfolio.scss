@@ -1,0 +1,11 @@
+.portfolio {
+  &__head {
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    @include tablet-min {
+      margin-bottom: 20px;
+    }
+  }
+}

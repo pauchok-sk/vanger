@@ -1,0 +1,91 @@
+.skills {
+  overflow: hidden;
+  @include laptop-min {
+    padding-top: 120px !important;
+  }
+  @include tablet-min {
+    padding-top: 0 !important;
+  }
+  &__img {
+    position: absolute;
+    top: -80px;
+    right: 0;
+    z-index: -1;
+    @include laptop-middle {
+      width: 440px;
+    }
+    @include laptop-min {
+      width: 300px;
+      top: -120px;
+      right: -40px;
+    }
+    @include tablet-min {
+      display: block;
+      position: static;
+      margin: 0 auto;
+    }
+  }
+  &__head {
+    margin-bottom: 60px;
+    padding-right: 600px;
+    @include laptop {
+      max-width: 560px;
+      padding: 0;
+    }
+    @include laptop-min {
+      max-width: none;
+      padding-right: 230px;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    @include tablet-min {
+      padding-right: 0;
+    }
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+    @include laptop-middle {
+      gap: 20px;
+    }
+    @include mobile {
+      gap: 10px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+    padding: 40px;
+    border-radius: 20px;
+    background: white;
+    @include laptop-min {
+      grid-column: 6 span;
+    }
+    @include tablet-min {
+      padding: 24px;
+    }
+  }
+  &__item-gallery {
+    position: relative;
+    width: 40px;
+    margin-bottom: 32px;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: var(--yellow);
+      right: -8px;
+      bottom: -8px;
+      z-index: -1;
+    }
+  }
+  &__item-icon {
+    width: 100%;
+  }
+}

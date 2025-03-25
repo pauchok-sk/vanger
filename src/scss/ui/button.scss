@@ -30,6 +30,13 @@
   @include pressed {
     color: var(--light);
   }
+  @include tablet {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.56px;
+    padding: 10px 24px;
+  }
+
   &._disabled {
     pointer-events: none;
     background-color: var(--stroke);

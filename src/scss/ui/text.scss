@@ -1,11 +1,42 @@
+.text {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--gray);
+  @include mobile {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
 .lg-text {
   font-size: 24px;
   font-weight: 300;
   line-height: 38px;
   letter-spacing: 0.48px;
+  margin: 0;
   @include tablet {
     font-size: 20px;
     line-height: 32px;
     letter-spacing: 0.4px;
+  }
+}
+
+.price-text {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0;
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+.caption {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray);
+  @include tablet {
+    font-size: 12px;
+    line-height: 16px;
   }
 }

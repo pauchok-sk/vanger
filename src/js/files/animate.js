@@ -7,7 +7,7 @@ export function backgroundParallax() {
       if (window.matchMedia("(min-width: 992px)").matches) {
         section.addEventListener("mousemove", (e) => {
           const { width, height } = section.getBoundingClientRect();
-          const x = (e.offsetX / width - 0.5) * -20;
+          const x = (e.offsetX / width - 0.5) * 20;
           const y = (e.offsetY / height - 0.5) * 20;
 
           backgrounds.forEach((bg, index) => {

@@ -1,0 +1,45 @@
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+  border-radius: 20px;
+  background: white;
+  z-index: 1;
+  &__body {
+    max-width: 850px;
+    @include desktop {
+      max-width: none;
+      padding-right: 460px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+    a {
+      display: block;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: var(--light);
+      transition: color .2s ease, background-color .2s ease;
+      @include hover {
+        color: var(--yellow);
+        background-color: var(--gray);
+      }
+      @include pressed {
+        background-color: var(--black);
+        color: white;
+      }
+    }
+  }
+  &__gallery {
+    position: absolute;
+    width: 420px;
+    top: 40px;
+    right: 40px;
+  }
+  &__img {
+    width: 100%;
+  }
+}
