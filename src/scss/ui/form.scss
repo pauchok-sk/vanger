@@ -21,10 +21,10 @@
     border-color: var(--stroke);
   }
   &:focus {
-    border-color: var(--yellow);
+    border-color: var(--yellow) !important;
     border-width: 2px;
     padding: 13px 18px;
-    background-color: white;
+    background-color: white !important;
 
     &::placeholder {
       color: var(--black);

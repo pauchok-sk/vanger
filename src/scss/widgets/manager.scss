@@ -91,8 +91,8 @@
       transition: color .2s ease, background-color .2s ease;
 
       @include pressed {
-        background-color: var(--black);
-        color: white;
+        background-color: var(--black) !important;
+        color: white !important;
       }
     }
 

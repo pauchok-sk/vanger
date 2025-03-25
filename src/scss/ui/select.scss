@@ -75,8 +75,8 @@
       background-color: var(--stroke);
     }
     @include pressed {
-      color: white;
-      background-color: var(--black);
+      color: white !important;
+      background-color: var(--black) !important;
     }
   }
 }

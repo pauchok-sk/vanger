@@ -58,8 +58,8 @@
         background-color: var(--gray);
       }
       @include pressed {
-        background-color: var(--black);
-        color: white;
+        background-color: var(--black) !important;
+        color: white !important;
       }
       @include tablet-min {
         padding: 2px 8px;

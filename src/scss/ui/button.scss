@@ -30,7 +30,7 @@
     color: var(--yellow);
   }
   @include pressed {
-    color: var(--light);
+    color: var(--light) !important;
   }
   @include tablet {
     font-size: 14px;
@@ -59,8 +59,8 @@
       color: var(--black);
     }
     @include pressed {
-      color: white;
-      background-color: var(--black);
+      color: white !important;
+      background-color: var(--black) !important;
     }
     @include tablet {
       text-underline-offset: 3px;

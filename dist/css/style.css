@@ -220,7 +220,7 @@ body {
   transition: color .2s ease,background-color .2s ease
 }
 .button:active {
-  color: var(--light)
+  color: var(--light)!important
 }
 .button._disabled {
   pointer-events: none;
@@ -239,8 +239,8 @@ body {
   text-underline-offset: 5px
 }
 .button._simple:active {
-  color: #fff;
-  background-color: var(--black)
+  color: #fff!important;
+  background-color: var(--black)!important
 }
 .list {
   padding-left: 0;
@@ -347,8 +347,8 @@ body {
   transition: color .2s ease,background-color .2s ease
 }
 .filters__btn:active {
-  background-color: var(--black);
-  color: #fff
+  background-color: var(--black)!important;
+  color: #fff!important
 }
 .portfolio-card {
   position: relative;
@@ -379,8 +379,8 @@ body {
   transition: color .2s ease,background-color .2s ease
 }
 .portfolio-card__list a:active {
-  background-color: var(--black);
-  color: #fff
+  background-color: var(--black)!important;
+  color: #fff!important
 }
 .portfolio-card__gallery {
   position: absolute;
@@ -469,8 +469,8 @@ body {
   transition: color .2s ease,background-color .2s ease
 }
 .select__item:active {
-  color: #fff;
-  background-color: var(--black)
+  color: #fff!important;
+  background-color: var(--black)!important
 }
 .input {
   padding: 14px 19px;
@@ -498,10 +498,10 @@ body {
   color: var(--gray)
 }
 .input:focus {
-  border-color: var(--yellow);
+  border-color: var(--yellow)!important;
   border-width: 2px;
   padding: 13px 18px;
-  background-color: #fff
+  background-color: #fff!important
 }
 .input:focus::-webkit-input-placeholder {
   color: var(--black)
@@ -1141,8 +1141,8 @@ body {
     transition: color .2s ease,background-color .2s ease
   }
   .manager__tel:active {
-    background-color: var(--black);
-    color: #fff
+    background-color: var(--black)!important;
+    color: #fff!important
   }
   .manager__tel svg {
     width: 20px;
