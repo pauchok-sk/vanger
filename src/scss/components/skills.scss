@@ -1,5 +1,6 @@
 .skills {
   overflow: hidden;
+  border-top: 1px solid var(--stroke);
   @include laptop-min {
     padding-top: 120px !important;
   }

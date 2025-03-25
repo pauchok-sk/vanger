@@ -8,10 +8,10 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap&_v=20250325162040" rel="stylesheet" />
-	<link rel="stylesheet" href="./files/css/bootsrap.min.css?_v=20250325162040">
-	<link rel="stylesheet" href="./files/css/aos.min.css?_v=20250325162040">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250325162040" />
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap&_v=20250325231536" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/bootsrap.min.css?_v=20250325231536">
+	<link rel="stylesheet" href="./files/css/aos.min.css?_v=20250325231536">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250325231536" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -144,9 +144,23 @@
 						<a href="#" class="filters__btn">Корпоративные сайты</a>
 						<a href="#" class="filters__btn">Онлайн-сервисы</a>
 					</div>
+					<div class="select d-sm-none">
+						<div class="select__button">
+							<input type="text" value="Все проекты" readonly class="select__input" />
+							<svg class="select__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</div>
+						<div class="select__body">
+							<a href="#" class="select__item">Интернет-магазины</a>
+							<a href="#" class="select__item">Одностраничные</a>
+							<a href="#" class="select__item">Корпоративные сайты</a>
+							<a href="#" class="select__item">Онлайн-сервисы</a>
+						</div>
+					</div>
 				</div>
-				<div class="d-flex flex-column gap-2 gal-xl-3">
-					<div class="portfolio-card">
+				<div class="d-flex flex-column gap-2 gap-sm-4">
+					<div data-aos="fade-up" class="portfolio-card">
 						<div class="portfolio-card__body">
 							<ul class="list portfolio-card__list mb-3">
 								<li><a href="#">Онлайн-сервис</a></li>
@@ -167,6 +181,105 @@
 							<img src="img/porfolio-img.png" alt="image" class="portfolio-card__img" />
 						</div>
 					</div>
+					<div data-aos="fade-up" class="portfolio-card">
+						<div class="portfolio-card__body">
+							<ul class="list portfolio-card__list mb-3">
+								<li><a href="#">Онлайн-сервис</a></li>
+								<li><a href="#">https://baikalmedikl.ru/</a></li>
+							</ul>
+							<h3 class="t-title mb-2">Байкал-Медикл</h3>
+							<p class="text mb-4">
+								Корпоративный сайт многопрофильного медицинского центра
+								“Байкал-Медикл”.
+							</p>
+							<div class="d-flex align-items-center justify-content-between gap-2">
+								<a href="#" class="button">Подробнее</a>
+								<div class="caption">Июль 2022</div>
+							</div>
+						</div>
+						<div class="portfolio-card__gallery">
+							<img src="img/porfolio-img.png" alt="image" class="portfolio-card__img" />
+						</div>
+					</div>
+					<div data-aos="fade-up" class="portfolio-card">
+						<div class="portfolio-card__body">
+							<ul class="list portfolio-card__list mb-3">
+								<li><a href="#">Онлайн-сервис</a></li>
+								<li><a href="#">https://pronedvizhimost.ru/</a></li>
+							</ul>
+							<h3 class="t-title mb-2">ПроНедвижимость</h3>
+							<p class="text mb-4">Федеральный портал ПроНедвижимость</p>
+							<div class="d-flex align-items-center justify-content-between gap-2">
+								<a href="#" class="button">Подробнее</a>
+								<div class="caption">Июль 2022</div>
+							</div>
+						</div>
+						<div class="portfolio-card__gallery">
+							<img src="img/porfolio-img.png" alt="image" class="portfolio-card__img" />
+						</div>
+					</div>
+				</div>
+				<a href="#" class="button _simple mx-auto mt-4 mt-md-5 portfolio__more">Все проекты</a>
+			</div>
+		</section>
+
+		<section class="sect price-learn">
+			<div class="container price-learn__container">
+				<div class="price-learn__info">
+					<div class="price-learn__head">
+						<h2 data-aos="fade-right" class="s-title mb-2">
+							Хотите узнать <br />
+							<span>стоимость разработки</span> <br />
+							Вашего сайта?
+						</h2>
+						<p data-aos="fade-right" class="large">Оставьте контакты <br class="d-sm-none"> и я свяжусь с Вами.</p>
+					</div>
+					<div data-aos="fade-right" data-da=".price-learn__container, 991" class="manager">
+						<div class="manager__head">
+							<div class="manager__avatar">
+								<img src="img/avatar.jpg" alt="image" class="manager__avatar-img" />
+							</div>
+							<div>
+								<h3 class="t-title mb-0">Данил</h3>
+								<p class="text text-black">Менеджер по работе с клиентами</p>
+							</div>
+						</div>
+						<div class="manager__contacts">
+							<div class="d-md-block d-flex flex-column align-items-center">
+								<div class="text text-black">
+									Я на связи ежедневно с 08:00 до 22:00
+								</div>
+								<div class="caption">Время Иркутское (МСК+5, GMT+8)</div>
+							</div>
+							<a href="tel:+89009082222" class="manager__tel">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-tel"></use>
+								</svg>
+								<span class="d-md-none">Позвонить</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div data-aos="fade-left" class="price-learn__main">
+					<div class="price-learn__main-head">
+						<h3 class="t-title">Оставить контакты</h3>
+					</div>
+					<img src="img/sales.png" alt="image" class="price-learn__main-img" />
+					<div class="price-learn__main-body">
+						<form action="#" class="position-relative z-1">
+							<div class="w-100 mb-2">
+								<input type="text" placeholder="Ваше имя" class="input" />
+							</div>
+							<div class="w-100 mb-4">
+								<input type="text" placeholder="Телефон или Email" class="input" />
+							</div>
+							<div class="d-flex align-items-center justify-content-between gap-4 gap-md-2 flex-wrap">
+								<input type="checkbox" id="price-learn-policy" checked class="policy-input">
+								<label for="price-learn-policy" class="caption policy-label">Согласен на <a href="#">обработку персональных данных</a></label>
+								<button type="submit" class="button w-sm-full">Отправить</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -177,10 +290,10 @@
 		<div class="container">
 		</div>
 	</footer>
-	<script src="./files/js/gsap.min.js?_v=20250325162040"></script>
-	<script src="./files/js/bootsrap.min.js?_v=20250325162040"></script>
-	<script src="./files/js/aos.min.js?_v=20250325162040"></script>
-	<script src="js/app.min.js?_v=20250325162040"></script>
+	<script src="./files/js/gsap.min.js?_v=20250325231536"></script>
+	<script src="./files/js/bootsrap.min.js?_v=20250325231536"></script>
+	<script src="./files/js/aos.min.js?_v=20250325231536"></script>
+	<script src="js/app.min.js?_v=20250325231536"></script>
 </body>
 
 </html>

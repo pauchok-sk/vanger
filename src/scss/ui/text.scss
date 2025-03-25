@@ -2,7 +2,8 @@
   font-size: 16px;
   line-height: 24px;
   color: var(--gray);
-  @include mobile {
+  margin: 0;
+  @include tablet {
     font-size: 14px;
     line-height: 20px;
   }
@@ -38,5 +39,18 @@
   @include tablet {
     font-size: 12px;
     line-height: 16px;
+  }
+}
+
+.large {
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.48px;
+  margin: 0;
+  @include tablet {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.4px;
   }
 }

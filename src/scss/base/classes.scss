@@ -1,0 +1,13 @@
+// colors
+
+.text-black {
+  color: var(--black) !important;
+}
+
+// sizes
+
+.w-sm-full {
+  @include tablet-min {
+    width: 100% !important;
+  }
+}

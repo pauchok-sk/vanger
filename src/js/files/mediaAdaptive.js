@@ -1,4 +1,4 @@
-export function mediaAdaptive() {
+export default function mediaAdaptive() {
   function DynamicAdapt(type) {
     this.type = type;
   }

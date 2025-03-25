@@ -5,6 +5,7 @@
 @import "./base/media";
 @import "./base/body-config";
 @import "./base/config-container";
+@import "./base/classes";
 
 // ui
 @import "./ui/button";
@@ -15,6 +16,11 @@
 @import "./ui/scrollable";
 @import "./ui/filters";
 @import "./ui/portfolio-card";
+@import "./ui/select";
+@import "./ui/form";
+
+// widgets
+@import "./widgets/manager";
 
 // components
 @import "./components/header";
@@ -22,5 +28,6 @@
 @import "./components/hero";
 @import "./components/skills";
 @import "./components/portfolio";
+@import "./components/price-learn";
 
 @import "./components/footer";

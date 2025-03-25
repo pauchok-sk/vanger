@@ -1,0 +1,87 @@
+.price-learn {
+  overflow: hidden;
+  border-top: 1px solid var(--stroke);
+  &__container {
+    display: flex;
+    gap: 60px;
+    @include laptop-middle {
+      gap: 30px;
+    }
+    @include laptop-min {
+      display: block;
+    }
+  }
+  &__info {
+    flex: 1;
+  }
+  &__head {
+    margin-bottom: 36px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__main {
+    position: relative;
+    flex: 1;
+    border-radius: 20px;
+    background: white;
+    z-index: 1;
+    @include laptop-min {
+      margin-bottom: 20px;
+    }
+    @include tablet-min {
+      margin-bottom: 10px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 220px;
+      height: 115px;
+      left: -200px;
+      top: -40px;
+      transform: rotate(-25deg);
+      background: url('@img/curve.svg') 0 0 / 100% auto no-repeat;
+      @include laptop-min {
+        left: 430px;
+        top: -120px;
+        transform: rotate(40deg);
+      }
+      @include tablet {
+        left: auto;
+        right: 0;
+        top: -70px;
+        transform: rotate(27deg);
+        width: 125px;
+      }
+    }
+  }
+  &__main-head {
+    padding: 22px 40px;
+    border-radius: 20px 20px 0px 0px;
+    background-color: var(--yellow);
+    @include tablet {
+      padding: 16px 40px;
+      text-align: center;
+      font-family: "Manrope", sans-serif;
+
+      .t-title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.64px;
+      }
+    }
+  }
+  &__main-body {
+    padding: 0px 40px 32px 40px;
+    @include tablet {
+      padding: 0px 24px 24px 24px;
+    }
+  }
+  &__main-img {
+    display: block;
+    margin: 0 auto;
+    transform: translateY(3px);
+  }
+}

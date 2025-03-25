@@ -3,6 +3,7 @@ export default class Scrollable {
     let defaultOptions = {
       wheelScrolling: true,
     };
+    this.isGrab = false;
     this.container = document.querySelector(selector);
     this.options = Object.assign(defaultOptions, options);
 
@@ -56,7 +57,7 @@ export default class Scrollable {
 
       if (this.options.wheelScrolling) {
         this.container.addEventListener("mousewheel", (e) => {
-          e.preventDefault();
+          if (this.isGrab) e.preventDefault();
           this.container.scrollLeft += e.deltaY;
         });
       }

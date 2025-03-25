@@ -5,11 +5,31 @@
   border-radius: 20px;
   background: white;
   z-index: 1;
+  @include laptop-min {
+    padding: 30px;
+  }
+  @include tablet {
+    padding: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  @include mobile {
+    padding-top: 10px;
+  }
   &__body {
     max-width: 850px;
     @include desktop {
       max-width: none;
       padding-right: 460px;
+    }
+    @include laptop-min {
+      padding-right: 340px;
+    }
+    @include tablet {
+      position: relative;
+      padding: 24px;
+      background-color: white;
+      z-index: 10;
     }
   }
   &__list {
@@ -17,12 +37,22 @@
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 24px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
     a {
       display: block;
       padding: 8px 16px;
       border-radius: 8px;
       background: var(--light);
-      transition: color .2s ease, background-color .2s ease;
+
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.64px;
+      transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
       @include hover {
         color: var(--yellow);
         background-color: var(--gray);
@@ -31,6 +61,14 @@
         background-color: var(--black);
         color: white;
       }
+      @include tablet-min {
+        padding: 2px 8px;
+
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 400;
+        letter-spacing: 0.48px;
+      }
     }
   }
   &__gallery {
@@ -38,8 +76,30 @@
     width: 420px;
     top: 40px;
     right: 40px;
+    filter: drop-shadow(0px 5px 20px rgba(85, 85, 85, 0.24));
+    @include laptop-min {
+      width: 320px;
+      right: 30px;
+    }
+    @include tablet {
+      position: relative;
+      height: 270px;
+      overflow: hidden;
+      top: auto;
+      right: auto;
+      margin: 0 auto;
+    }
+    @include mobile-min {
+      width: calc(100% - 20px);
+      height: 200px;
+    }
   }
   &__img {
     width: 100%;
+    @include tablet {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 }

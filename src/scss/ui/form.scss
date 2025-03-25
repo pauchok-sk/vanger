@@ -1,0 +1,103 @@
+.input {
+  padding: 14px 19px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--light);
+  border: 1px solid var(--light);
+  outline: none;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  &::placeholder {
+    color: var(--gray);
+  }
+  @include hover {
+    border-color: var(--stroke);
+  }
+  &:focus {
+    border-color: var(--yellow);
+    border-width: 2px;
+    padding: 13px 18px;
+    background-color: white;
+
+    &::placeholder {
+      color: var(--black);
+    }
+  }
+  @include tablet {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.48px;
+    padding: 9px 14px;
+
+    &:focus {
+      border-color: var(--yellow);
+      border-width: 2px;
+      padding: 8px 13px;
+      background-color: white;
+
+      &::placeholder {
+        color: var(--black);
+      }
+    }
+  }
+}
+
+.policy-input {
+  display: none;
+  &:checked + label {
+    &::before {
+      width: 24px;
+      height: 24px;
+      top: -2px;
+      left: -2px;
+      background: url("@img/check.svg") 0 0 / 100% auto no-repeat;
+      border: none;
+
+      @include tablet {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+.policy-label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 34px;
+  @include desktop {
+    max-width: 225px;
+  }
+  @include tablet {
+    padding-left: 30px;
+  }
+
+  a {
+    font-weight: 700;
+    color: black;
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 2px solid var(--black);
+    @include tablet {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
