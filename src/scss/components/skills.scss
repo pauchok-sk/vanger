@@ -69,24 +69,10 @@
       padding: 24px;
     }
   }
-  &__item-gallery {
-    position: relative;
-    width: 40px;
+  .mini-gallery {
     margin-bottom: 32px;
-    z-index: 1;
-    &::before {
-      position: absolute;
-      content: "";
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background-color: var(--yellow);
-      right: -8px;
-      bottom: -8px;
-      z-index: -1;
+    @include tablet {
+      margin-bottom: 28px;
     }
-  }
-  &__item-icon {
-    width: 100%;
   }
 }

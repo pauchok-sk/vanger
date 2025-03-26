@@ -18,9 +18,12 @@
 @import "./ui/portfolio-card";
 @import "./ui/select";
 @import "./ui/form";
+@import "./ui/mini-gallery";
 
 // widgets
 @import "./widgets/manager";
+@import "./widgets/burger";
+@import "./widgets/modal";
 
 // components
 @import "./components/header";
@@ -30,5 +33,6 @@
 @import "./components/portfolio";
 @import "./components/price-learn";
 @import "./components/about-min";
+@import "./components/cooperation";
 
 @import "./components/footer";

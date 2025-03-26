@@ -25,11 +25,50 @@
 				</a>
 			</div>
 		</div>
-		<a href="#" class="button _min d-none d-lg-flex">Узнать стоимость</a>
-		<div class="header__burger-btn" id="burger-btn">
+		<button data-bs-toggle="modal" data-bs-target="#price-learn-modal" class="button _min d-none d-lg-flex">Узнать стоимость</button>
+		<div class="header__burger-btn" id="burger-open">
 			<svg>
-				<use xlink:href='img/icons/icons.svg#icon-burger'></use>
+				<use xlink:href="img/icons/icons.svg#icon-burger"></use>
 			</svg>
 		</div>
 	</div>
 </header>
+
+<div class="burger" id="burger">
+	<div class="burger__head">
+		<div class="container d-flex align-items-center justify-content-between">
+			<div class="f-title">Главное меню</div>
+			<button class="btn-reset burger__close" id="burger-close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<div class="burger__body">
+		<div class="container">
+			<ul class="list burger__list">
+				<li><a href="#">Разработка сайтов</a></li>
+				<li><a href="#">Цены и сроки</a></li>
+				<li><a href="#">Портфолио</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div class="burger__contacts">
+				<a href="tel:+73952951155" class="burger__tel">+7 (3952) 95-11-55</a>
+				<ul class="list burger__social">
+					<li>
+						<a href="#" target="_blank" class="burger__social-btn">
+							<img src="img/whats.svg" alt="icon" class="burger__social-icon" />
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="burger__social-btn">
+							<img src="img/tg.svg" alt="icon" class="burger__social-icon" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button data-bs-toggle="modal" data-bs-target="#price-learn-modal" class="button burger__bottom-btn">Узнать стоимость</button>
+		</div>
+	</div>
+</div>

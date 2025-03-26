@@ -31,4 +31,49 @@
       width: 400px;
     }
   }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+    @include laptop-middle {
+      gap: 20px;
+    }
+    @include laptop-min {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    border-radius: 20px;
+    background-color: white;
+    grid-column: 2 span;
+    &:nth-child(5n + 4),
+    &:nth-child(5n + 5) {
+      grid-column: 3 span;
+    }
+    @include laptop-middle {
+      padding: 16px;
+    }
+    @include laptop-min {
+      width: fit-content;
+    }
+    @include tablet {
+      gap: 17px;
+      padding: 12px;
+      .mini-gallery {
+        width: 26px;
+        height: 26px;
+        &::before {
+          width: 20px;
+          height: 20px;
+          right: -5px;
+          bottom: -5px;
+        }
+      }
+    }
+  }
 }

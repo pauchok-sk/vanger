@@ -70,3 +70,15 @@
     letter-spacing: 0.48px;
   }
 }
+
+.f-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.48px;
+  margin: 0;
+  @include tablet {
+    font-size: 18px;
+    letter-spacing: 0.36px;
+  }
+}
