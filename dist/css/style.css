@@ -769,12 +769,14 @@ textarea.input {
   max-width: 400px;
   padding: 15px 24px!important
 }
+.modal .modal-dialog {
+  width: 560px!important;
+  max-width: calc(100vw - 20px)!important
+}
 .modal .modal-content {
   border: none;
   border-radius: 20px;
-  overflow: hidden;
-  width: 560px!important;
-  max-width: calc(100vw - 20px)!important
+  overflow: hidden
 }
 .modal__head {
   display: flex;

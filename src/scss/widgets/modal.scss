@@ -1,10 +1,12 @@
 .modal {
+  .modal-dialog {
+    width: 560px !important;
+    max-width: calc(100vw - 20px) !important;
+  }
   .modal-content {
     border: none;
     border-radius: 20px;
     overflow: hidden;
-    width: 560px !important;
-    max-width: calc(100vw - 20px) !important;
   }
   &__head {
     @include flex-between;
