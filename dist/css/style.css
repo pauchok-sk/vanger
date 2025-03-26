@@ -1138,6 +1138,69 @@ textarea.input {
   right: 0;
   bottom: 0
 }
+.faq {
+  background-color: var(--yellow);
+  padding: 40px 0 80px 0
+}
+.faq__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+.faq__accordion-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 1px solid var(--black)
+}
+.faq__accordion-btn[aria-expanded=true] .faq__accordion-rect::before {
+  -webkit-transform: rotate(0);
+  transform: rotate(0)
+}
+.faq__accordion-rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  height: 40px
+}
+.faq__accordion-rect::after,
+.faq__accordion-rect::before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 2px;
+  border-radius: 3px;
+  background-color: currentColor;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease,-webkit-transform .2s ease
+}
+.faq__accordion-rect::before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+.faq__accordion-content {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 20px 0 40px 0;
+  margin: 0
+}
+.footer {
+  padding: 40px 0;
+  font-size: 16px;
+  line-height: 24px
+}
+.footer a {
+  text-underline-offset: 5px
+}
+.footer__policy {
+  text-decoration: underline
+}
 @media (min-width:992px) {
   ._scrollable::-webkit-scrollbar {
     width: 0;
@@ -1603,6 +1666,24 @@ textarea.input {
     width: 15px;
     height: 15px
   }
+  .faq {
+    padding-bottom: 40px
+  }
+  .faq__accordion-rect {
+    width: 32px;
+    height: 32px
+  }
+  .faq__accordion-rect::after,
+  .faq__accordion-rect::before {
+    width: 20px
+  }
+  .faq__accordion-content {
+    padding: 15px 0
+  }
+  .footer {
+    font-size: 14px;
+    line-height: 20px
+  }
 }
 @media (max-width:575px) {
   .w-sm-full {
@@ -1731,6 +1812,12 @@ textarea.input {
   .contacts__list a:hover span::before {
     right: 0
   }
+  .footer a:hover {
+    text-decoration: underline
+  }
+  .footer__policy:hover {
+    text-decoration: none!important
+  }
 }
 @media (hover:none) {
   .button:active {
@@ -1788,5 +1875,11 @@ textarea.input {
   }
   .contacts__list a:active span::before {
     right: 0
+  }
+  .footer a:active {
+    text-decoration: underline
+  }
+  .footer__policy:active {
+    text-decoration: none!important
   }
 }
