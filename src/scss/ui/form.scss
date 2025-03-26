@@ -1,5 +1,8 @@
 textarea.input {
   resize: none;
+  @include tablet {
+    height: 80px;
+  }
 }
 .input {
   padding: 14px 19px;

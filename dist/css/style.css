@@ -197,6 +197,9 @@ body {
   width: -moz-fit-content!important;
   width: fit-content!important
 }
+.flex-1 {
+  flex: 1
+}
 .btn-reset {
   cursor: pointer;
   background-color: rgba(0,0,0,0);
@@ -586,6 +589,7 @@ textarea.input {
   z-index: -1
 }
 .mini-gallery__icon {
+  display: block;
   width: 100%
 }
 .manager {
@@ -659,6 +663,10 @@ textarea.input {
 .manager__tel svg {
   width: 24px;
   height: 24px
+}
+.manager__body {
+  padding: 32px 40px;
+  border-top: 1px solid var(--stroke)
 }
 .burger {
   position: fixed;
@@ -1072,6 +1080,64 @@ textarea.input {
 .cooperation__slide-img {
   width: 100%
 }
+.contacts {
+  border-top: 1px solid var(--stroke)
+}
+.contacts__logo {
+  margin-bottom: 40px
+}
+.contacts__wrapper {
+  display: flex;
+  gap: 40px
+}
+.contacts__main {
+  flex: 1
+}
+.contacts__block:not(:last-child) {
+  margin-bottom: 40px
+}
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+.contacts__list a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content
+}
+.contacts__list a span {
+  position: relative
+}
+.contacts__list a span::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: right .2s ease
+}
+.contacts__list-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 38px;
+  letter-spacing: .48px
+}
+.contacts__list-btn .mini-gallery {
+  width: 32px;
+  height: 32px
+}
+.contacts__list-btn .mini-gallery::before {
+  width: 20px;
+  height: 20px;
+  right: 0;
+  bottom: 0
+}
 @media (min-width:992px) {
   ._scrollable::-webkit-scrollbar {
     width: 0;
@@ -1233,6 +1299,12 @@ textarea.input {
     width: -moz-fit-content;
     width: fit-content
   }
+  .contacts__wrapper {
+    display: block
+  }
+  .contacts__main {
+    margin-bottom: 40px
+  }
 }
 @media (max-width:865px) {
   .about-min__head-img {
@@ -1321,6 +1393,9 @@ textarea.input {
     top: 0;
     left: 0
   }
+  textarea.input {
+    height: 80px
+  }
   .input {
     font-size: 12px;
     font-weight: 400;
@@ -1394,6 +1469,9 @@ textarea.input {
   .manager__tel svg {
     width: 20px;
     height: 20px
+  }
+  .manager__body {
+    padding: 20px 24px 24px 24px
   }
   .modal__head {
     padding: 20px
@@ -1507,6 +1585,23 @@ textarea.input {
   }
   .cooperation__slide {
     width: 120px!important
+  }
+  .contacts__list {
+    gap: 10px
+  }
+  .contacts__list-btn {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    gap: 10px
+  }
+  .contacts__list-btn .mini-gallery {
+    width: 24px;
+    height: 24px
+  }
+  .contacts__list-btn .mini-gallery::before {
+    width: 15px;
+    height: 15px
   }
 }
 @media (max-width:575px) {
@@ -1633,6 +1728,9 @@ textarea.input {
   .header__burger-btn:hover {
     background-color: rgba(253,217,71,.5)
   }
+  .contacts__list a:hover span::before {
+    right: 0
+  }
 }
 @media (hover:none) {
   .button:active {
@@ -1687,5 +1785,8 @@ textarea.input {
   }
   .header__burger-btn:active {
     background-color: rgba(253,217,71,.5)
+  }
+  .contacts__list a:active span::before {
+    right: 0
   }
 }
