@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Вангер</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap&_v=20250327142252" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/bootsrap.min.css?_v=20250327142252">
+	<link rel="stylesheet" href="./files/css/aos.min.css?_v=20250327142252">
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250327142252">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250327142252" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container header__container">
+			<a href="#" class="header__logo">
+				<img src="img/logo.svg" alt="logo" class="header__logo-img" />
+			</a>
+			<nav class="header__nav">
+				<ul class="list header__list">
+					<li><a href="#">Разработка сайтов</a></li>
+					<li><a href="#">Цены и сроки</a></li>
+					<li><a href="#">Портфолио</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="header__contacts">
+				<a href="tel:+73952951155" class="header__tel d-none d-xl-block">+7 (3952) 95-11-55</a>
+				<div class="list header__contacts-list">
+					<a href="#" class="header__contacts-btn">
+						<img src="img/whats.svg" alt="icon" class="header__contacts-icon" />
+					</a>
+					<a href="#" class="header__contacts-btn">
+						<img src="img/tg.svg" alt="icon" class="header__contacts-icon" />
+					</a>
+					<a href="#" class="header__contacts-btn d-xl-none">
+						<img src="img/question.svg" alt="icon" class="header__contacts-icon" />
+					</a>
+				</div>
+			</div>
+			<button data-bs-toggle="modal" data-bs-target="#price-learn-modal" class="button _min d-none d-lg-flex">Узнать стоимость</button>
+			<div class="header__burger-btn" id="burger-open">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-burger"></use>
+				</svg>
+			</div>
+		</div>
+	</header>
+
+	<div class="burger" id="burger">
+		<div class="burger__head">
+			<div class="container d-flex align-items-center justify-content-between">
+				<div class="f-title">Главное меню</div>
+				<button class="btn-reset burger__close" id="burger-close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="burger__body">
+			<div class="container">
+				<ul class="list burger__list">
+					<li><a href="#">Разработка сайтов</a></li>
+					<li><a href="#">Цены и сроки</a></li>
+					<li><a href="#">Портфолио</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<div class="burger__contacts">
+					<a href="tel:+73952951155" class="burger__tel">+7 (3952) 95-11-55</a>
+					<ul class="list burger__social">
+						<li>
+							<a href="#" target="_blank" class="burger__social-btn">
+								<img src="img/whats.svg" alt="icon" class="burger__social-icon" />
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="burger__social-btn">
+								<img src="img/tg.svg" alt="icon" class="burger__social-icon" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<button data-bs-toggle="modal" data-bs-target="#price-learn-modal" class="button burger__bottom-btn">Узнать стоимость</button>
+			</div>
+		</div>
+	</div>
+
+	<main>
+
+		<section class="services">
+			<div class="container">
+				<ul class="list breadcrumbs">
+					<li><a href="#">Главная</a></li>
+					<li>Разработка сайтов</li>
+				</ul>
+				<h1 data-aos="fade-right" class="m-title">Разработка сайтов</h1>
+				<p data-aos="fade-right" class="lg-text">
+					Определим главные задачи и подберем подходящие инструменты для их решения
+				</p>
+				<div class="services__wrapper">
+					<div data-aos="flip-right" class="services__item">
+						<div class="services__item-body">
+							<div class="services__item-head">
+								<div class="mini-gallery mb-3">
+									<img src="img/code-window.svg" alt="icon" class="mini-gallery__icon" />
+								</div>
+								<h3 class="t-title mb-2">Одностраничный сайт (Лендинг)</h3>
+								<div class="caption">Срок разработки от 14 дней</div>
+							</div>
+							<div class="services__item-accordion">
+								<div id="services-collapse-1" class="collapse">
+									<div class="services__accordion-body">
+										<ul class="list services__accordion-list">
+											<li>Прототип и дизайн сайта (ПК, планшет, мобильный)</li>
+											<li>Система управления контентом на русском языке</li>
+											<li>Установка и настройка аналитики</li>
+											<li>Разработка структуры сайта</li>
+											<li>
+												Размещение на нашем сервере на 6 месяцев (ssl сертификат,
+												защита от вирусов, бэкапы, тех. поддержка)
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div data-bs-toggle="collapse" data-bs-target="#services-collapse-1" class="services__accordion-btn">
+									<span>Что услуга в себя включает?</span>
+									<span>Свернуть</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="services__item-footer">
+								<div class="price-text mb-4">от 30 000 ₽</div>
+								<button data-message-form-btn="Одностраничный сайт (Лендинг)" data-bs-target="#price-learn-modal" data-bs-toggle="modal" class="button w-100 mb-2">
+									Заказать сайт
+								</button>
+								<a href="#" class="button w-100 _gray">Посмотреть пример</a>
+							</div>
+						</div>
+					</div>
+					<div data-aos="flip-right" data-aos-delay="100" class="services__item">
+						<div class="services__item-body">
+							<div class="services__item-head">
+								<div class="mini-gallery mb-3">
+									<img src="img/building.svg" alt="icon" class="mini-gallery__icon" />
+								</div>
+								<h3 class="t-title mb-2">Корпоративный сайт/сайт СМИ</h3>
+								<div class="caption">Срок разработки от 30 дней</div>
+							</div>
+							<div class="services__item-accordion">
+								<div id="services-collapse-2" class="collapse">
+									<div class="services__accordion-body">
+										<ul class="list services__accordion-list">
+											<li>Прототип и дизайн сайта (ПК, планшет, мобильный)</li>
+											<li>Система управления контентом на русском языке</li>
+											<li>Установка и настройка аналитики</li>
+											<li>Разработка структуры сайта</li>
+											<li>
+												Размещение на нашем сервере на 6 месяцев (ssl сертификат,
+												защита от вирусов, бэкапы, тех. поддержка)
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div data-bs-toggle="collapse" data-message-form-btn="Корпоративный сайт/сайт СМИ" data-bs-target="#services-collapse-2" class="services__accordion-btn">
+									<span>Что услуга в себя включает?</span>
+									<span>Свернуть</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="services__item-footer">
+								<div class="price-text mb-4">от 100 000 ₽</div>
+								<button data-bs-target="#price-learn-modal" data-bs-toggle="modal" class="button w-100 mb-2">
+									Заказать сайт
+								</button>
+								<a href="#" class="button w-100 _gray">Посмотреть пример</a>
+							</div>
+						</div>
+					</div>
+					<div data-aos="flip-right" data-aos-delay="200" class="services__item">
+						<div class="services__item-body">
+							<div class="services__item-head">
+								<div class="mini-gallery mb-3">
+									<img src="img/store.svg" alt="icon" class="mini-gallery__icon" />
+								</div>
+								<h3 class="t-title mb-2">Интернет-магазин</h3>
+								<div class="caption">Срок разработки от 60 дней</div>
+							</div>
+							<div class="services__item-accordion">
+								<div id="services-collapse-3" class="collapse">
+									<div class="services__accordion-body">
+										<ul class="list services__accordion-list">
+											<li>Прототип и дизайн сайта (ПК, планшет, мобильный)</li>
+											<li>Система управления контентом на русском языке</li>
+											<li>Установка и настройка аналитики</li>
+											<li>Разработка структуры сайта</li>
+											<li>
+												Размещение на нашем сервере на 6 месяцев (ssl сертификат,
+												защита от вирусов, бэкапы, тех. поддержка)
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div data-bs-toggle="collapse" data-message-form-btn="Корпоративный сайт/сайт СМИ" data-bs-target="#services-collapse-3" class="services__accordion-btn">
+									<span>Что услуга в себя включает?</span>
+									<span>Свернуть</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="services__item-footer">
+								<div class="price-text mb-4">от 250 000 ₽</div>
+								<button data-bs-target="#price-learn-modal" data-bs-toggle="modal" class="button w-100 mb-2">
+									Заказать сайт
+								</button>
+								<a href="#" class="button w-100 _gray">Посмотреть пример</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="steps">
+			<div class="container">
+				<h2 data-aos="fade-up" class="s-title text-md-center">Этапы работы</h2>
+				<div class="steps__wrapper">
+					<div data-aos="flip-right" class="steps__item">
+						<img src="img/step-1.jpg" alt="image" class="steps__item-img" />
+						<div class="steps__item-number">1.</div>
+						<h4 class="f-title mb-2">Проектирование</h4>
+						<p class="text">
+							Проектируем простое меню и навигацию, продумываем функциональность.
+							Проводим анализ, составляем техническое задание и подписываем договор.
+						</p>
+					</div>
+					<div data-aos="flip-right" data-aos-delay="100" class="steps__item">
+						<img src="img/step-2.jpg" alt="image" class="steps__item-img" />
+						<div class="steps__item-number">2.</div>
+						<h4 class="f-title mb-2">Прототип и дизайн</h4>
+						<p class="text">
+							Разрабатываем прототип сайта и согласовываем его с заказчиков. Далее
+							рисуем стильный и современный дизайн, который позволит улучшить
+							восприятие текстов на странице и передать настроение человеку.
+						</p>
+					</div>
+					<div data-aos="flip-right" data-aos-delay="200" class="steps__item">
+						<img src="img/step-3.jpg" alt="image" class="steps__item-img" />
+						<div class="steps__item-number">3.</div>
+						<h4 class="f-title mb-2">Верстка и программирование</h4>
+						<p class="text">
+							Делаем адаптивную верстку макетов дизайна, программируем и настраиваем
+							CMS, интеграции и аналитику.
+						</p>
+					</div>
+					<div data-aos="flip-right" data-aos-delay="300" class="steps__item">
+						<img src="img/step-4.jpg" alt="image" class="steps__item-img" />
+						<div class="steps__item-number">4.</div>
+						<h4 class="f-title mb-2">Тестирование</h4>
+						<p class="text">
+							Обязательные этап разработки, проверяем сайт по чек-листам, проверяем
+							тексты, функционал и верстку на всех возможных устройствах.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sect contacts">
+			<div class="container">
+				<div class="contacts__wrapper">
+					<div data-aos="fade-right" class="contacts__main">
+						<img src="img/logo-mini.svg" alt="image" class="contacts__logo" />
+						<div class="contacts__block">
+							<h2 class="t-title mb-3 mb-md-4">Контакты</h2>
+							<ul class="list contacts__list">
+								<li>
+									<a href="tel:+73952951155" class="contacts__list-btn">
+										<div class="mini-gallery">
+											<img src="img/tel.svg" alt="icon" class="mini-gallery__icon" />
+										</div>
+										<span>+7 (3952) 95-11-55</span>
+									</a>
+								</li>
+								<li>
+									<a href="tel:+73952951155" class="contacts__list-btn">
+										<div class="mini-gallery">
+											<img src="img/smartphone.svg" alt="icon" class="mini-gallery__icon" />
+										</div>
+										<span>+7 (914) 899-00-73</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank" class="contacts__list-btn">
+										<div class="mini-gallery">
+											<img src="img/tg-icon.svg" alt="icon" class="mini-gallery__icon" />
+										</div>
+										<span>@VMartynenko</span>
+									</a>
+								</li>
+								<li>
+									<a href="mailto:mail@vanger.org" class="contacts__list-btn">
+										<div class="mini-gallery">
+											<img src="img/mail.svg" alt="icon" class="mini-gallery__icon" />
+										</div>
+										<span>mail@vanger.org</span>
+									</a>
+								</li>
+								<li>
+									<div class="contacts__list-btn">
+										<div class="mini-gallery">
+											<img src="img/map-pin.svg" alt="icon" class="mini-gallery__icon" />
+										</div>
+										<span>г. Иркутск, ул. Пискунова, 160, оф. 629</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="contacts__block">
+							<h2 class="t-title mb-3 mb-md-4">Режим работы офиса</h2>
+							<ul class="list contacts__list">
+								<li>
+									<div class="contacts__list-btn">
+										<div class="mini-gallery">
+											<img src="img/clock.svg" alt="icon" class="mini-gallery__icon" />
+										</div>
+										<span>Понедельник-пятница: с 10:00 до 19:00</span>
+									</div>
+								</li>
+								<li>
+									<div class="contacts__list-btn">
+										<div class="mini-gallery">
+											<img src="img/calendar.svg" alt="icon" class="mini-gallery__icon" />
+										</div>
+										<span>Суббота-воскресенье: выходные</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div data-aos="fade-up" class="manager flex-1">
+						<div class="manager__head">
+							<div class="manager__avatar">
+								<img src="img/avatar.jpg" alt="image" class="manager__avatar-img" />
+							</div>
+							<div>
+								<h3 class="t-title mb-0">Данил</h3>
+								<p class="text text-black">Менеджер по работе с клиентами</p>
+							</div>
+						</div>
+						<div class="manager__contacts">
+							<div class="d-md-block d-flex flex-column align-items-center">
+								<div class="text text-black">
+									Я на связи ежедневно с 08:00 до 22:00
+								</div>
+								<div class="caption">Время Иркутское (МСК+5, GMT+8)</div>
+							</div>
+							<a href="tel:+89009082222" class="manager__tel">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-tel"></use>
+								</svg>
+								<span class="d-md-none">Позвонить</span>
+							</a>
+						</div>
+						<div class="manager__body">
+							<div class="f-title text-center text-md-start mb-2 mb-md-0">У Вас есть вопросы?</div>
+							<p class="text mb-4 text-md-start text-center text-black">Оставьте контакты <br class="d-md-none"> и я свяжусь с Вами:</p>
+							<form action="#">
+								<div class="mb-2">
+									<input type="text" placeholder="Ваше имя" class="input" />
+								</div>
+								<div class="mb-2">
+									<input type="text" placeholder="Телефон или Email" class="input" />
+								</div>
+								<div class="mb-3">
+									<textarea rows="3" class="input" placeholder="Вопрос или сообщение"></textarea>
+								</div>
+								<div class="d-flex align-items-center justify-content-between gap-4 gap-md-2 flex-wrap">
+									<input type="checkbox" id="contacts-policy" checked class="policy-input" />
+									<label for="contacts-policy" class="caption policy-label">Согласен на
+										<a href="#">обработку <br />
+											персональных данных</a></label>
+									<button type="submit" class="button w-sm-full">Отправить</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="faq">
+			<div class="container">
+				<h2 class="s-title">Часто задаваемые вопросы</h2>
+				<div class="faq__accordion" id="faq-accordion">
+					<div>
+						<div class="faq__accordion-btn" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1">
+							<span class="f-title">Разработка</span>
+							<div class="faq__accordion-rect"></div>
+						</div>
+						<div class="collapse" id="faq-collapse-1" data-bs-parent="#faq-accordion">
+							<p class="faq__accordion-content">
+								Работаем с различными платформами и используем в своей работе
+								современные технологии
+							</p>
+						</div>
+					</div>
+
+					<div>
+						<div class="faq__accordion-btn" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2">
+							<span class="f-title">Разработка</span>
+							<div class="faq__accordion-rect"></div>
+						</div>
+						<div class="collapse" id="faq-collapse-2" data-bs-parent="#faq-accordion">
+							<p class="faq__accordion-content">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore,
+								laudantium explicabo. Non obcaecati porro eius natus accusantium,
+								cum reiciendis perspiciatis excepturi, quos odit, veritatis ad dolor
+								maiores tempora molestias eaque.
+							</p>
+						</div>
+					</div>
+
+					<div>
+						<div class="faq__accordion-btn" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3">
+							<span class="f-title">Разработка</span>
+							<div class="faq__accordion-rect"></div>
+						</div>
+						<div class="collapse" id="faq-collapse-3" data-bs-parent="#faq-accordion">
+							<p class="faq__accordion-content">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore,
+								laudantium explicabo. Non obcaecati porro eius natus accusantium,
+								cum reiciendis perspiciatis excepturi, quos odit, veritatis ad dolor
+								maiores tempora molestias eaque.
+							</p>
+						</div>
+					</div>
+
+					<div>
+						<div class="faq__accordion-btn" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4">
+							<span class="f-title">Разработка</span>
+							<div class="faq__accordion-rect"></div>
+						</div>
+						<div class="collapse" id="faq-collapse-4" data-bs-parent="#faq-accordion">
+							<p class="faq__accordion-content">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore,
+								laudantium explicabo. Non obcaecati porro eius natus accusantium,
+								cum reiciendis perspiciatis excepturi, quos odit, veritatis ad dolor
+								maiores tempora molestias eaque.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+	<footer class="footer">
+		<div class="container d-flex align-items-center justify-content-between gap-4 flex-wrap flex-column flex-lg-row">
+			<div>2025 © Вангер.рф, г. Иркутск</div>
+			<a href="#" class="footer__policy">Политика обработки персональных данных</a>
+			<div class="d-flex align-items-center gap-2">
+				<img src="img/settings.svg" alt="image" />
+				<span> Разработка сайта – </span>
+				<a href="#">Вангер.рф</a>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal fade" id="price-learn-modal" tabindex="-1" aria-labelledby="price-learn-modal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal__head">
+					<div class="f-title">Узнать стоимость</div>
+					<button data-bs-dismiss="modal" class="btn-reset modal__close">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-close"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="manager__head">
+					<div class="manager__avatar">
+						<img src="img/avatar.jpg" alt="image" class="manager__avatar-img" />
+					</div>
+					<div>
+						<h3 class="t-title mb-0">Данил</h3>
+						<p class="text text-black">Менеджер по работе с клиентами</p>
+					</div>
+				</div>
+				<div class="modal__body">
+					<p class="modal__form-content">Оставьте контакты <br class="d-sm-none"> и я свяжусь с Вами:</p>
+					<form action="#">
+						<input type="text" id="message-form" class="d-none">
+						<div class="mb-2">
+							<input type="text" placeholder="Ваше имя" class="input">
+						</div>
+						<div class="mb-2">
+							<input type="text" placeholder="Телефон или Email" class="input">
+						</div>
+						<div class="mb-3">
+							<textarea rows="5" class="input" placeholder="Вопрос или сообщение"></textarea>
+						</div>
+						<div class="d-flex align-items-center justify-content-between gap-4 gap-md-2 flex-wrap">
+							<input type="checkbox" id="price-learn-modal-policy" checked class="policy-input">
+							<label for="price-learn-modal-policy" class="caption policy-label">Согласен на <a href="#">обработку <br> персональных данных</a></label>
+							<button type="submit" class="button w-sm-full">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./files/js/gsap.min.js?_v=20250327142252"></script>
+	<script src="./files/js/bootsrap.min.js?_v=20250327142252"></script>
+	<script src="./files/js/aos.min.js?_v=20250327142252"></script>
+	<script src="./files/js/swiper.min.js?_v=20250327142252"></script>
+	<script src="js/app.min.js?_v=20250327142252"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+.steps {
+  padding: 40px 0px;
+  @include tablet {
+    padding-top: 20px;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    @include tablet {
+      gap: 20px;
+    }
+    @include tablet-min {
+      gap: 10px;
+    }
+  }
+  &__item {
+    grid-column: 1 span;
+    border-radius: 20px;
+    background: white;
+    padding: 20px;
+    @include laptop-middle {
+      grid-column: 2 span;
+    }
+    @include tablet-min {
+      grid-column: 4 span;
+    }
+  }
+  &__item-img {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    height: 120px;
+    object-fit: cover;
+    object-position: top left;
+    @include laptop-middle {
+      width: 330px;
+      margin: 0px auto;
+    }
+  }
+  &__item-number {
+    position: relative;
+    width: fit-content;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.48px;
+    margin: 32px 0px 28px 0px;
+    z-index: 1;
+    
+    &::before {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+      background-color: var(--yellow);
+      width: 30px;
+      height: 30px;
+      right: -16px;
+      bottom: -4px;
+      z-index: -1;
+    }
+  }
+}

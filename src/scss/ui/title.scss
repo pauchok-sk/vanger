@@ -18,6 +18,22 @@
   }
 }
 
+.m-title {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 110%;
+  margin: 0px 0px 20px 0px;
+  @include laptop {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  @include tablet {
+    font-size: 32px;
+    line-height: 130%;
+    margin-bottom: 10px;
+  }
+}
+
 .s-title {
   font-size: 48px;
   font-weight: 500;

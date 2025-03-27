@@ -220,6 +220,7 @@ body {
   width: fit-content;
   outline: 0;
   border: none;
+  cursor: pointer;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -250,6 +251,13 @@ body {
   color: #fff!important;
   background-color: var(--black)!important
 }
+.button._gray {
+  background-color: var(--stroke)
+}
+.button._gray:active {
+  background-color: var(--black);
+  color: #fff
+}
 .list {
   padding-left: 0;
   margin: 0;
@@ -260,6 +268,12 @@ body {
   font-weight: 500;
   line-height: 110%;
   letter-spacing: -.72px
+}
+.m-title {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 110%;
+  margin: 0 0 20px 0
 }
 .s-title {
   font-size: 48px;
@@ -591,6 +605,23 @@ textarea.input {
 .mini-gallery__icon {
   display: block;
   width: 100%
+}
+.breadcrumbs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px
+}
+.breadcrumbs li {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px
+}
+.breadcrumbs li:not(:last-child)::after {
+  content: ">";
+  margin-left: 10px
+}
+.breadcrumbs a {
+  transition: opacity .2s ease
 }
 .manager {
   border-radius: 20px;
@@ -1190,6 +1221,158 @@ textarea.input {
   padding: 20px 0 40px 0;
   margin: 0
 }
+.services {
+  padding: 40px 0
+}
+.services__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 80px;
+  gap: 40px
+}
+.services__item {
+  position: relative;
+  grid-column: 1 span;
+  min-height: 545px;
+  transition: box-shadow .2s ease
+}
+.services__item-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 20px;
+  z-index: 30
+}
+.services__item-body._shadow {
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,.07)
+}
+.services__item-head {
+  padding: 20px;
+  margin-bottom: 10px;
+  flex: 0 1 205px;
+  flex-shrink: 0
+}
+.services__item-accordion {
+  border-radius: 12px;
+  background: var(--light);
+  overflow: hidden;
+  margin-bottom: 30px
+}
+.services__accordion-body {
+  padding: 20px 20px 10px 20px
+}
+.services__accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+.services__accordion-list li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 14px;
+  line-height: 20px
+}
+.services__accordion-list li::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  left: 7px;
+  top: 7px
+}
+.services__accordion-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: background-color .2s ease
+}
+.services__accordion-btn[aria-expanded=true] svg {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.services__accordion-btn[aria-expanded=true] span {
+  color: var(--gray)
+}
+.services__accordion-btn[aria-expanded=true] span:first-child {
+  display: none
+}
+.services__accordion-btn[aria-expanded=true] span:nth-child(2) {
+  display: block
+}
+.services__accordion-btn span:nth-child(2) {
+  display: none
+}
+.services__accordion-btn svg {
+  width: 20px;
+  height: 20px;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease,-webkit-transform .2s ease
+}
+.services__item-footer {
+  margin-top: auto;
+  padding: 20px
+}
+.steps {
+  padding: 40px 0
+}
+.steps__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 40px
+}
+.steps__item {
+  grid-column: 1 span;
+  border-radius: 20px;
+  background: #fff;
+  padding: 20px
+}
+.steps__item-img {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  height: 120px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: top left;
+  object-position: top left
+}
+.steps__item-number {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: .48px;
+  margin: 32px 0 28px 0;
+  z-index: 1
+}
+.steps__item-number::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  background-color: var(--yellow);
+  width: 30px;
+  height: 30px;
+  right: -16px;
+  bottom: -4px;
+  z-index: -1
+}
 .footer {
   padding: 40px 0;
   font-size: 16px;
@@ -1232,6 +1415,10 @@ textarea.input {
 @media (max-width:1365px) {
   .bann-title {
     font-size: 56px
+  }
+  .m-title {
+    font-size: 48px;
+    line-height: 52px
   }
   .s-title {
     font-size: 36px;
@@ -1281,6 +1468,27 @@ textarea.input {
   }
   .about-min__item {
     padding: 16px
+  }
+  .services__wrapper {
+    gap: 20px;
+    margin-top: 60px
+  }
+  .services__item-head {
+    padding: 0
+  }
+  .services__item-accordion {
+    margin-bottom: 24px
+  }
+  .services__item-footer {
+    padding: 0;
+    margin-top: 0
+  }
+  .steps__item {
+    grid-column: 2 span
+  }
+  .steps__item-img {
+    width: 330px;
+    margin: 0 auto
   }
 }
 @media (max-width:991px) {
@@ -1368,6 +1576,25 @@ textarea.input {
   .contacts__main {
     margin-bottom: 40px
   }
+  .services__wrapper {
+    margin-top: 32px
+  }
+  .services__item {
+    grid-column: 3 span;
+    min-height: auto
+  }
+  .services__item-body {
+    display: block;
+    position: static;
+    min-height: auto;
+    padding: 24px
+  }
+  .services__item-body._shadow {
+    box-shadow: none
+  }
+  .services__item-head {
+    margin-bottom: 20px
+  }
 }
 @media (max-width:865px) {
   .about-min__head-img {
@@ -1387,6 +1614,11 @@ textarea.input {
   .bann-title {
     font-size: 32px;
     line-height: 130%
+  }
+  .m-title {
+    font-size: 32px;
+    line-height: 130%;
+    margin-bottom: 10px
   }
   .s-title {
     font-size: 30px;
@@ -1494,6 +1726,9 @@ textarea.input {
   .policy-label::before {
     width: 16px;
     height: 16px
+  }
+  .breadcrumbs {
+    margin-bottom: 32px
   }
   .manager__head {
     flex-direction: column;
@@ -1680,12 +1915,31 @@ textarea.input {
   .faq__accordion-content {
     padding: 15px 0
   }
+  .services {
+    padding-top: 32px;
+    padding-bottom: 20px
+  }
+  .services__accordion-body {
+    padding: 20px 12px 10px 20px
+  }
+  .services__accordion-btn {
+    padding: 16px 20px
+  }
+  .steps {
+    padding-top: 20px
+  }
+  .steps__wrapper {
+    gap: 20px
+  }
   .footer {
     font-size: 14px;
     line-height: 20px
   }
 }
 @media (max-width:575px) {
+  [data-aos-delay] {
+    transition-delay: 0s!important
+  }
   .w-sm-full {
     width: 100%!important
   }
@@ -1724,6 +1978,12 @@ textarea.input {
   }
   .price-learn__main {
     margin-bottom: 10px
+  }
+  .steps__wrapper {
+    gap: 10px
+  }
+  .steps__item {
+    grid-column: 4 span
   }
 }
 @media (max-width:479px) {
@@ -1764,6 +2024,10 @@ textarea.input {
     background-color: var(--stroke);
     color: var(--black)
   }
+  .button._gray:hover {
+    background-color: var(--gray);
+    color: var(--yellow)
+  }
   .filters__btn:hover {
     background-color: var(--stroke)
   }
@@ -1779,6 +2043,9 @@ textarea.input {
   }
   .policy-label a:hover {
     text-decoration: underline
+  }
+  .breadcrumbs a:hover {
+    opacity: .6
   }
   .manager__tel:hover {
     -webkit-transform: scale(1.1);
@@ -1812,6 +2079,9 @@ textarea.input {
   .contacts__list a:hover span::before {
     right: 0
   }
+  .services__accordion-btn:hover {
+    background-color: var(--stroke)
+  }
   .footer a:hover {
     text-decoration: underline
   }
@@ -1828,6 +2098,10 @@ textarea.input {
     background-color: var(--stroke);
     color: var(--black)
   }
+  .button._gray:active {
+    background-color: var(--gray);
+    color: var(--yellow)
+  }
   .filters__btn:active {
     background-color: var(--stroke)
   }
@@ -1843,6 +2117,9 @@ textarea.input {
   }
   .policy-label a:active {
     text-decoration: underline
+  }
+  .breadcrumbs a:active {
+    opacity: .6
   }
   .manager__tel:active {
     -webkit-transform: scale(1.1);
@@ -1875,6 +2152,9 @@ textarea.input {
   }
   .contacts__list a:active span::before {
     right: 0
+  }
+  .services__accordion-btn:active {
+    background-color: var(--stroke)
   }
   .footer a:active {
     text-decoration: underline

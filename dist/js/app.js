@@ -172,6 +172,22 @@
         const da = new DynamicAdapt("max");
         da.init();
     }
+    function messageForm() {
+        const buttons = document.querySelectorAll("[data-message-form-btn]");
+        if (buttons.length) {
+            const inputMessage = document.querySelector("#message-form");
+            buttons.forEach((btn => {
+                btn.addEventListener("click", (() => {
+                    const message = btn.dataset.messageFormBtn;
+                    inputMessage.value = message;
+                }));
+            }));
+            const modal = document.querySelector("#price-learn-modal");
+            modal.addEventListener("hide.bs.modal", (() => {
+                inputMessage.value = "";
+            }));
+        }
+    }
     class Scrollable {
         constructor(selector, options) {
             let defaultOptions = {
@@ -250,6 +266,15 @@
                 document.body.removeEventListener("click", handleClose);
             }
         }
+    }
+    function servicesItemShadow() {
+        const buttonsAccordion = document.querySelectorAll(".services__accordion-btn");
+        if (buttonsAccordion.length) buttonsAccordion.forEach((btn => {
+            btn.addEventListener("click", (() => {
+                const item = btn.closest(".services__item-body");
+                item.classList.toggle("_shadow");
+            }));
+        }));
     }
     function sliders() {
         const cooperationSlider = document.querySelector(".cooperation__slider");
@@ -466,4 +491,6 @@
     mediaAdaptive();
     sliders();
     burger();
+    messageForm();
+    servicesItemShadow();
 })();

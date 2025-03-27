@@ -15,6 +15,7 @@
   width: fit-content;
   outline: none;
   border: none;
+  cursor: pointer;
 
   font-size: 16px;
   font-weight: 500;
@@ -64,6 +65,17 @@
     }
     @include tablet {
       text-underline-offset: 3px;
+    }
+  }
+  &._gray {
+    background-color: var(--stroke);
+    @include hover {
+      background-color: var(--gray);
+      color: var(--yellow);
+    }
+    @include pressed {
+      background-color: var(--black);
+      color: white;
     }
   }
 }
