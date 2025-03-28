@@ -200,6 +200,9 @@ body {
 .flex-1 {
   flex: 1
 }
+.ms-auto {
+  margin-left: auto!important
+}
 .btn-reset {
   cursor: pointer;
   background-color: rgba(0,0,0,0);
@@ -340,6 +343,11 @@ body {
   line-height: 32px;
   margin: 0
 }
+.price-text-2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px
+}
 .caption {
   font-size: 14px;
   line-height: 20px;
@@ -365,6 +373,12 @@ body {
 }
 .filters {
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  padding: 0 15px;
   gap: 8px
 }
 .filters__btn {
@@ -1373,6 +1387,38 @@ textarea.input {
   bottom: -4px;
   z-index: -1
 }
+.prices {
+  padding: 40px 0 80px 0;
+  overflow: hidden
+}
+.prices__title {
+  margin-bottom: 40px
+}
+.prices__nav {
+  margin-bottom: 40px
+}
+.prices__block:not(:last-child) {
+  margin-bottom: 40px
+}
+.prices__item {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+  row-gap: 24px;
+  border-radius: 20px;
+  background-color: #fff
+}
+.prices__item:not(:last-child) {
+  margin-bottom: 20px
+}
+.prices__item .price-text-2 {
+  flex-shrink: 0
+}
+.prices__item .button {
+  width: 200px;
+  flex-shrink: 0
+}
 .footer {
   padding: 40px 0;
   font-size: 16px;
@@ -1595,6 +1641,13 @@ textarea.input {
   .services__item-head {
     margin-bottom: 20px
   }
+  .prices__item {
+    flex-wrap: wrap;
+    align-items: start
+  }
+  .prices__item-info {
+    max-width: 350px
+  }
 }
 @media (max-width:865px) {
   .about-min__head-img {
@@ -1650,6 +1703,11 @@ textarea.input {
   }
   .price-text {
     font-size: 20px
+  }
+  .price-text-2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px
   }
   .caption {
     font-size: 12px;
@@ -1931,6 +1989,18 @@ textarea.input {
   .steps__wrapper {
     gap: 20px
   }
+  .prices {
+    padding: 32px 0
+  }
+  .prices__title {
+    margin-bottom: 32px
+  }
+  .prices__nav {
+    margin-bottom: 32px
+  }
+  .prices__item {
+    padding: 24px
+  }
   .footer {
     font-size: 14px;
     line-height: 20px
@@ -1985,6 +2055,20 @@ textarea.input {
   .steps__item {
     grid-column: 4 span
   }
+  .prices__item {
+    display: block
+  }
+  .prices__item:not(:last-child) {
+    margin-bottom: 10px
+  }
+  .prices__item .mini-gallery {
+    width: 33px;
+    height: 33px;
+    margin-bottom: 15px
+  }
+  .prices__item .button {
+    width: 100%
+  }
 }
 @media (max-width:479px) {
   .container {
@@ -1992,6 +2076,11 @@ textarea.input {
   }
   .sect {
     padding: 40px 0
+  }
+  .filters {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    padding: 0 10px
   }
   .portfolio-card {
     padding-top: 10px

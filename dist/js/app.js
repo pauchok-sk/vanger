@@ -233,6 +233,7 @@
     }
     function scrollables() {
         new Scrollable("#portfolio-nav");
+        new Scrollable("#prices-nav");
     }
     function select_select() {
         const buttons = document.querySelectorAll(".select__button");
