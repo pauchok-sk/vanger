@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Вангер</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap&_v=20250331193938" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/bootsrap.min.css?_v=20250331193938">
+	<link rel="stylesheet" href="./files/css/aos.min.css?_v=20250331193938">
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250331193938">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250331193938" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container header__container">
+			<a href="#" class="header__logo">
+				<img src="img/logo.svg" alt="logo" class="header__logo-img" />
+			</a>
+			<nav class="header__nav">
+				<ul class="list header__list">
+					<li><a href="#">Разработка сайтов</a></li>
+					<li><a href="#">Цены и сроки</a></li>
+					<li><a href="#">Портфолио</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="header__contacts">
+				<a href="tel:+73952951155" class="header__tel d-none d-xl-block">+7 (3952) 95-11-55</a>
+				<div class="list header__contacts-list">
+					<a href="#" class="header__contacts-btn">
+						<img src="img/whats.svg" alt="icon" class="header__contacts-icon" />
+					</a>
+					<a href="#" class="header__contacts-btn">
+						<img src="img/tg.svg" alt="icon" class="header__contacts-icon" />
+					</a>
+					<a href="#" class="header__contacts-btn d-xl-none">
+						<img src="img/question.svg" alt="icon" class="header__contacts-icon" />
+					</a>
+				</div>
+			</div>
+			<button data-bs-toggle="modal" data-bs-target="#price-learn-modal" class="button _min d-none d-lg-flex">Узнать стоимость</button>
+			<div class="header__burger-btn" id="burger-open">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-burger"></use>
+				</svg>
+			</div>
+		</div>
+	</header>
+
+	<div class="burger" id="burger">
+		<div class="burger__head">
+			<div class="container d-flex align-items-center justify-content-between">
+				<div class="f-title">Главное меню</div>
+				<button class="btn-reset burger__close" id="burger-close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="burger__body">
+			<div class="container">
+				<ul class="list burger__list">
+					<li><a href="#">Разработка сайтов</a></li>
+					<li><a href="#">Цены и сроки</a></li>
+					<li><a href="#">Портфолио</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<div class="burger__contacts">
+					<a href="tel:+73952951155" class="burger__tel">+7 (3952) 95-11-55</a>
+					<ul class="list burger__social">
+						<li>
+							<a href="#" target="_blank" class="burger__social-btn">
+								<img src="img/whats.svg" alt="icon" class="burger__social-icon" />
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="burger__social-btn">
+								<img src="img/tg.svg" alt="icon" class="burger__social-icon" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<button data-bs-toggle="modal" data-bs-target="#price-learn-modal" class="button burger__bottom-btn">Узнать стоимость</button>
+			</div>
+		</div>
+	</div>
+
+	<main>
+
+		<section class="single">
+			<div class="container">
+				<ul class="list breadcrumbs">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Портфолио</a></li>
+					<li>Д-Доктора</li>
+				</ul>
+				<h1 class="m-title">Д-Доктора</h1>
+				<p class="lg-text mb-4">Уникальный онлайн-ресурс, созданный для врачей, студентов медицинских вузов, ученых и других специалистов в сфере здравоохранения</p>
+				<div class="d-flex gap-2 flex-wrap">
+					<div class="tag">Онлайн-сервис</div>
+					<a href="https://ddoctors.ru/" target="_blank" class="tag">https://ddoctors.ru/</a>
+				</div>
+				<div class="single__gallery">
+					<img src="img/screen.jpg" alt="image" class="single__gallery-img">
+				</div>
+			</div>
+		</section>
+
+	</main>
+	<footer class="footer">
+		<div class="container d-flex align-items-center justify-content-between gap-4 flex-wrap flex-column flex-lg-row">
+			<div>2025 © Вангер.рф, г. Иркутск</div>
+			<a href="#" class="footer__policy">Политика обработки персональных данных</a>
+			<div class="d-flex align-items-center gap-2">
+				<img src="img/settings.svg" alt="image" />
+				<span> Разработка сайта – </span>
+				<a href="#">Вангер.рф</a>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal fade" id="price-learn-modal" tabindex="-1" aria-labelledby="price-learn-modal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal__head">
+					<div class="f-title">Узнать стоимость</div>
+					<button data-bs-dismiss="modal" class="btn-reset modal__close">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-close"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="manager__head">
+					<div class="manager__avatar">
+						<img src="img/avatar.jpg" alt="image" class="manager__avatar-img" />
+					</div>
+					<div>
+						<h3 class="t-title mb-0">Данил</h3>
+						<p class="text text-black">Менеджер по работе с клиентами</p>
+					</div>
+				</div>
+				<div class="modal__body">
+					<p class="modal__form-content">Оставьте контакты <br class="d-sm-none"> и я свяжусь с Вами:</p>
+					<form action="#">
+						<input type="text" id="message-form" class="d-none">
+						<div class="mb-2">
+							<input type="text" placeholder="Ваше имя" class="input">
+						</div>
+						<div class="mb-2">
+							<input type="text" placeholder="Телефон или Email" class="input">
+						</div>
+						<div class="mb-3">
+							<textarea rows="5" class="input" placeholder="Вопрос или сообщение"></textarea>
+						</div>
+						<div class="d-flex align-items-center justify-content-between gap-4 gap-md-2 flex-wrap">
+							<input type="checkbox" id="price-learn-modal-policy" checked class="policy-input">
+							<label for="price-learn-modal-policy" class="caption policy-label">Согласен на <a href="#">обработку <br> персональных данных</a></label>
+							<button type="submit" class="button w-sm-full">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./files/js/gsap.min.js?_v=20250331193938"></script>
+	<script src="./files/js/bootsrap.min.js?_v=20250331193938"></script>
+	<script src="./files/js/aos.min.js?_v=20250331193938"></script>
+	<script src="./files/js/swiper.min.js?_v=20250331193938"></script>
+	<script src="js/app.min.js?_v=20250331193938"></script>
+</body>
+
+</html>

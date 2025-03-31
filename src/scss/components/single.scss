@@ -1,0 +1,21 @@
+.single {
+  padding: 40px 0px;
+  @include tablet {
+    padding: 32px 0px;
+  } 
+  &__gallery {
+    max-width: 1160px;
+    border-radius: 13px;
+    overflow: hidden;
+    border: 1px solid var(--stroke);
+    margin: 40px auto 0px auto;
+    @include tablet {
+      margin-top: 32px;
+    }
+  }
+  &__gallery-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
