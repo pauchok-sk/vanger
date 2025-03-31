@@ -24,6 +24,7 @@
     background-color: white;
     border-radius: 8px;
     flex-shrink: 0;
+    gap: 10px;
     white-space: nowrap;
 
     font-size: 16px;
@@ -31,13 +32,56 @@
     line-height: 24px;
     letter-spacing: 0.64px;
 
-    transition: color .2s ease, background-color .2s ease;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
     @include hover {
-      background-color: var(--stroke);
+      background-color: var(--yellow);
+      .filters__num {
+        background-color: white;
+      }
     }
     @include pressed {
       background-color: var(--black) !important;
       color: white !important;
+
+      .filters__num {
+        color: var(--black);
+      }
+    }
+    &._active {
+      pointer-events: none;
+      background-color: var(--yellow);
+    }
+
+    @include tablet {
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.48px;
+      padding: 8px;
+      gap: 4px
+    }
+  }
+  &__num {
+    @include flex-center;
+    width: 24px;
+    height: 24px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+
+    @include tablet {
+      width: 16px;
+      height: 16px;
+      font-size: 10px;
+      line-height: 12px;
     }
   }
 }

@@ -391,6 +391,7 @@ body {
   background-color: #fff;
   border-radius: 8px;
   flex-shrink: 0;
+  gap: 10px;
   white-space: nowrap;
   font-size: 16px;
   font-weight: 500;
@@ -401,6 +402,26 @@ body {
 .filters__btn:active {
   background-color: var(--black)!important;
   color: #fff!important
+}
+.filters__btn:active .filters__num {
+  color: var(--black)
+}
+.filters__btn._active {
+  pointer-events: none;
+  background-color: var(--yellow)
+}
+.filters__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  transition: color .2s ease,background-color .2s ease
 }
 .portfolio-card {
   position: relative;
@@ -636,6 +657,49 @@ textarea.input {
 }
 .breadcrumbs a {
   transition: opacity .2s ease
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px
+}
+.pagination__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: .64px;
+  transition: color .2s ease,background-color .2s ease
+}
+.pagination__btn:active {
+  background-color: var(--black);
+  color: var(--yellow)
+}
+.pagination__btn._active {
+  pointer-events: none;
+  background-color: var(--yellow)
+}
+.pagination__btn._prev svg {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+.pagination__btn._next svg {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg)
+}
+.pagination__btn svg {
+  width: 24px;
+  height: 24px
+}
+div.pagination__btn {
+  pointer-events: none
 }
 .manager {
   border-radius: 20px;
@@ -1419,6 +1483,16 @@ textarea.input {
   width: 200px;
   flex-shrink: 0
 }
+.archive {
+  overflow: hidden;
+  padding: 40px 0 80px 0
+}
+.archive__title {
+  margin: 0 0 40px 0
+}
+.archive__body {
+  margin-top: 40px
+}
 .footer {
   padding: 40px 0;
   font-size: 16px;
@@ -1719,6 +1793,19 @@ textarea.input {
     line-height: 32px;
     letter-spacing: .4px
   }
+  .filters__btn {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: .48px;
+    padding: 8px;
+    gap: 4px
+  }
+  .filters__num {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    line-height: 12px
+  }
   .portfolio-card {
     padding: 20px 0 0 0;
     display: flex;
@@ -1787,6 +1874,20 @@ textarea.input {
   }
   .breadcrumbs {
     margin-bottom: 32px
+  }
+  .pagination {
+    margin-top: 20px
+  }
+  .pagination__btn {
+    width: 48px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .56px
+  }
+  .pagination__btn:nth-child(3),
+  .pagination__btn:nth-child(4) {
+    display: none
   }
   .manager__head {
     flex-direction: column;
@@ -2001,6 +2102,15 @@ textarea.input {
   .prices__item {
     padding: 24px
   }
+  .archive {
+    padding: 32px 0 60px 0
+  }
+  .archive__title {
+    margin-bottom: 32px
+  }
+  .archive__body {
+    margin-top: 32px
+  }
   .footer {
     font-size: 14px;
     line-height: 20px
@@ -2118,7 +2228,10 @@ textarea.input {
     color: var(--yellow)
   }
   .filters__btn:hover {
-    background-color: var(--stroke)
+    background-color: var(--yellow)
+  }
+  .filters__btn:hover .filters__num {
+    background-color: #fff
   }
   .portfolio-card__list a:hover {
     color: var(--yellow);
@@ -2135,6 +2248,10 @@ textarea.input {
   }
   .breadcrumbs a:hover {
     opacity: .6
+  }
+  .pagination__btn:hover {
+    background-color: var(--yellow);
+    background-color: #fff
   }
   .manager__tel:hover {
     -webkit-transform: scale(1.1);
@@ -2192,7 +2309,10 @@ textarea.input {
     color: var(--yellow)
   }
   .filters__btn:active {
-    background-color: var(--stroke)
+    background-color: var(--yellow)
+  }
+  .filters__btn:active .filters__num {
+    background-color: #fff
   }
   .portfolio-card__list a:active {
     color: var(--yellow);
@@ -2209,6 +2329,10 @@ textarea.input {
   }
   .breadcrumbs a:active {
     opacity: .6
+  }
+  .pagination__btn:active {
+    background-color: var(--yellow);
+    background-color: #fff
   }
   .manager__tel:active {
     -webkit-transform: scale(1.1);
