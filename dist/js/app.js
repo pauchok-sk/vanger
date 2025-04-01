@@ -74,6 +74,30 @@
             updateHeightBurger();
         }
     }
+    function map() {
+        const contactsMap = document.querySelector("#map");
+        if (contactsMap) {
+            function init() {
+                const center = JSON.parse(contactsMap.dataset.center);
+                const zoom = Number(contactsMap.dataset.zoom);
+                const map = new ymaps.Map("map", {
+                    center,
+                    zoom
+                });
+                const placemark = new ymaps.Placemark(center, {}, {});
+                map.controls.remove("geolocationControl");
+                map.controls.remove("searchControl");
+                map.controls.remove("trafficControl");
+                map.controls.remove("typeSelector");
+                map.controls.remove("fullscreenControl");
+                map.controls.remove("zoomControl");
+                map.controls.remove("rulerControl");
+                map.behaviors.disable([ "scrollZoom" ]);
+                map.geoObjects.add(placemark);
+            }
+            ymaps.ready(init);
+        }
+    }
     function mediaAdaptive() {
         function DynamicAdapt(type) {
             this.type = type;
@@ -278,6 +302,21 @@
             }));
         }));
     }
+    function singleMoreToggle() {
+        const btn = document.querySelector(".single__btn-more");
+        if (btn) {
+            const more = document.querySelector(".single__more");
+            btn.addEventListener("click", (() => {
+                if (more.classList.contains("_open")) {
+                    more.classList.remove("_open");
+                    btn.textContent = "Смотреть проект полностью";
+                } else {
+                    more.classList.add("_open");
+                    btn.textContent = "Свернуть все экраны";
+                }
+            }));
+        }
+    }
     function sliders() {
         const cooperationSlider = document.querySelector(".cooperation__slider");
         if (cooperationSlider) {
@@ -296,6 +335,25 @@
                         slidesPerView: "auto",
                         spaceBetween: 40
                     }
+                }
+            });
+        }
+        const singleSlider = document.querySelector(".single__slider");
+        if (singleSlider) {
+            new Swiper(singleSlider, {
+                speed: 800,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 3500
+                },
+                navigation: {
+                    prevEl: ".single .slider-btn._prev",
+                    nextEl: ".single .slider-btn._next"
+                },
+                pagination: {
+                    el: ".single .slider-pagination",
+                    clickable: true
                 }
             });
         }
@@ -495,4 +553,6 @@
     burger();
     messageForm();
     servicesItemShadow();
+    singleMoreToggle();
+    map();
 })();

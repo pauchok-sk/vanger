@@ -716,6 +716,63 @@ a.tag:active {
   background-color: var(--black);
   color: #fff
 }
+.slider-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  padding: 0;
+  color: var(--black);
+  border: 1px solid hsla(0,0%,100%,.5);
+  background-color: rgba(0,0,0,0);
+  transition: color .2s ease,background-color .2s ease,border-color .2s ease
+}
+.slider-btn:active {
+  background-color: var(--black);
+  border-color: var(--black);
+  color: var(--yellow)
+}
+.slider-btn.swiper-button-disabled {
+  color: var(--gray);
+  pointer-events: none
+}
+.slider-btn._prev {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+.slider-btn._next {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg)
+}
+.slider-btn svg {
+  width: 24px;
+  height: 24px
+}
+.slider-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto!important;
+  gap: 8px;
+  flex-shrink: 0
+}
+.slider-pagination .swiper-pagination-bullet {
+  flex-shrink: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0!important;
+  opacity: 1;
+  border-radius: 8px;
+  background-color: var(--stroke);
+  transition: background-color .2s ease
+}
+.slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 40px;
+  background-color: var(--yellow)
+}
 .manager {
   border-radius: 20px;
   background-color: #fff;
@@ -1262,6 +1319,11 @@ a.tag:active {
   right: 0;
   bottom: 0
 }
+.contacts__map {
+  margin-top: 80px;
+  width: 100%;
+  height: 640px
+}
 .faq {
   background-color: var(--yellow);
   padding: 40px 0 80px 0
@@ -1523,6 +1585,35 @@ a.tag:active {
   height: auto;
   display: block
 }
+.single__more {
+  display: none
+}
+.single__more._open {
+  display: block
+}
+.single__content {
+  max-width: 840px;
+  margin: 100px auto
+}
+.single__slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 13px;
+  border: 1px solid var(--stroke);
+  background-color: #fff
+}
+.single__slider {
+  max-width: 800px
+}
+.single__slide-img {
+  width: 100%
+}
+.single__btn-more {
+  margin: 40px auto 0 auto
+}
+.rec-projects {
+  border-top: 1px solid var(--stroke)
+}
 .footer {
   padding: 40px 0;
   font-size: 16px;
@@ -1726,6 +1817,10 @@ a.tag:active {
   .contacts__main {
     margin-bottom: 40px
   }
+  .contacts__map {
+    margin-top: 60px;
+    height: 500px
+  }
   .services__wrapper {
     margin-top: 32px
   }
@@ -1751,6 +1846,9 @@ a.tag:active {
   }
   .prices__item-info {
     max-width: 350px
+  }
+  .single__content {
+    margin: 80px auto
   }
 }
 @media (max-width:865px) {
@@ -1926,6 +2024,10 @@ a.tag:active {
     letter-spacing: .48px;
     padding: 2px 8px
   }
+  .slider-btn {
+    width: 48px;
+    height: 48px
+  }
   .manager__head {
     flex-direction: column;
     text-align: center;
@@ -2097,6 +2199,10 @@ a.tag:active {
     width: 15px;
     height: 15px
   }
+  .contacts__map {
+    margin-top: 40px;
+    height: 400px
+  }
   .faq {
     padding-bottom: 40px
   }
@@ -2153,6 +2259,9 @@ a.tag:active {
   }
   .single__gallery {
     margin-top: 32px
+  }
+  .single__content {
+    margin: 60px auto
   }
   .footer {
     font-size: 14px;
@@ -2299,6 +2408,10 @@ a.tag:active {
   a.tag:hover {
     background-color: var(--yellow)
   }
+  .slider-btn:hover {
+    background-color: var(--yellow);
+    border-color: var(--yellow)
+  }
   .manager__tel:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1)
@@ -2382,6 +2495,10 @@ a.tag:active {
   }
   a.tag:active {
     background-color: var(--yellow)
+  }
+  .slider-btn:active {
+    background-color: var(--yellow);
+    border-color: var(--yellow)
   }
   .manager__tel:active {
     -webkit-transform: scale(1.1);
