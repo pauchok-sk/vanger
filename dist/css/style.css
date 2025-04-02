@@ -155,7 +155,8 @@ template {
   --green: #32c032
 }
 html {
-  box-sizing: border-box
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%
 }
 *,
 *::after,
@@ -224,6 +225,7 @@ body {
   outline: 0;
   border: none;
   cursor: pointer;
+  color: var(--black);
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -555,6 +557,10 @@ textarea.input {
   background-color: var(--light);
   border: 1px solid var(--light);
   outline: 0;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  appearance: none;
+  -webkit-appearance: none;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -875,7 +881,7 @@ a.tag:active {
   visibility: visible
 }
 .burger .container {
-  padding: 0 20px!important
+  padding: 0 10px 0 20px!important
 }
 .burger__head {
   padding: 10px 0;
@@ -1377,7 +1383,9 @@ a.tag:active {
   margin: 0
 }
 .services {
-  padding: 40px 0
+  position: relative;
+  padding: 40px 0;
+  z-index: 10
 }
 .services__wrapper {
   display: grid;
@@ -1574,7 +1582,6 @@ a.tag:active {
   padding: 40px 0
 }
 .single__gallery {
-  max-width: 1160px;
   border-radius: 13px;
   overflow: hidden;
   border: 1px solid var(--stroke);
@@ -2346,6 +2353,18 @@ a.tag:active {
   }
   .portfolio-card {
     padding-top: 10px
+  }
+  .portfolio-card._reverse-mobile {
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0
+  }
+  .portfolio-card._reverse-mobile .portfolio-card__body {
+    background-color: rgba(0,0,0,0)
+  }
+  .portfolio-card._reverse-mobile .portfolio-card__gallery {
+    max-width: calc(100% - 60px);
+    margin-top: 20px
   }
   .header__container {
     padding: 0 10px!important
