@@ -15,7 +15,7 @@
                         gsap.to(bg, {
                             x: x * depth,
                             y: y * depth,
-                            duration: duration || 45,
+                            duration: duration || 15,
                             ease: "power2.out"
                         });
                     }));
