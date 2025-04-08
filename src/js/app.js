@@ -1,5 +1,6 @@
 import "../scss/style.scss";
 import { backgroundParallax } from "./files/animate.js";
+import btnUp from "./files/btnUp.js";
 import burger from "./files/burger.js";
 import map from "./files/map.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
@@ -24,3 +25,4 @@ messageForm();
 servicesItemShadow();
 singleMoreToggle();
 map();
+btnUp();

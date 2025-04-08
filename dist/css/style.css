@@ -782,6 +782,35 @@ a.tag:active {
   width: 40px;
   background-color: var(--yellow)
 }
+.btn-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+  z-index: 150;
+  transition: background-color .2s ease,-webkit-transform .4s ease;
+  transition: transform .4s ease,background-color .2s ease;
+  transition: transform .4s ease,background-color .2s ease,-webkit-transform .4s ease
+}
+.btn-up:active {
+  color: #fff
+}
+.btn-up._hidden {
+  -webkit-transform: translateY(70px);
+  transform: translateY(70px)
+}
+.btn-up svg {
+  width: 35px;
+  height: 35px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
 .manager {
   border-radius: 20px;
   background-color: #fff;
@@ -2432,6 +2461,10 @@ a.tag:active {
     background-color: var(--yellow);
     border-color: var(--yellow)
   }
+  .btn-up:hover {
+    color: var(--yellow);
+    background-color: var(--black)
+  }
   .manager__tel:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1)
@@ -2519,6 +2552,10 @@ a.tag:active {
   .slider-btn:active {
     background-color: var(--yellow);
     border-color: var(--yellow)
+  }
+  .btn-up:active {
+    color: var(--yellow);
+    background-color: var(--black)
   }
   .manager__tel:active {
     -webkit-transform: scale(1.1);

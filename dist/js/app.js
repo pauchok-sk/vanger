@@ -42,6 +42,19 @@
             yoyo: true
         });
     }
+    function btnUp() {
+        const btnUp = document.querySelector(".btn-up");
+        if (btnUp) {
+            window.addEventListener("scroll", hanldeHide);
+            hanldeHide();
+            btnUp.addEventListener("click", (() => {
+                window.scrollTo(0, 0);
+            }));
+            function hanldeHide() {
+                if (window.scrollY < 250 || window.pageYOffset < 250) btnUp.classList.add("_hidden"); else btnUp.classList.remove("_hidden");
+            }
+        }
+    }
     function burger() {
         const burgerOpenBtn = document.querySelector("#burger-open");
         const burgerCloseBtn = document.querySelector("#burger-close");
@@ -555,4 +568,5 @@
     servicesItemShadow();
     singleMoreToggle();
     map();
+    btnUp();
 })();
