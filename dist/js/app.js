@@ -44,7 +44,7 @@
     }
     function btnUp() {
         const btnUp = document.querySelector(".btn-up");
-        if (btnUp) {
+        if (btnUp && window.matchMedia("(min-width:992px)").matches) {
             window.addEventListener("scroll", hanldeHide);
             hanldeHide();
             btnUp.addEventListener("click", (() => {

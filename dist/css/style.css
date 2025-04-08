@@ -1787,6 +1787,9 @@ a.tag:active {
     width: 320px;
     right: 30px
   }
+  .btn-up {
+    display: none
+  }
   .header__container {
     justify-content: start
   }
